@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Motion MVP</title>
+    <link rel="stylesheet" href="static/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Sports Motion MVP</h1>
+        <p>上传训练视频，生成基础动作报告（MVP 版本）。</p>
+      </header>
+
+      <section class="card">
+        <label class="field">
+          <span>后端地址</span>
+          <input id="baseUrl" type="url" value="" placeholder="http://127.0.0.1:8000" />
+          <small>留空会默认使用当前页面的后端。</small>
+        </label>
+        <label class="field">
+          <span>选择视频文件</span>
+          <input id="videoFile" type="file" accept="video/*" />
+        </label>
+        <button id="analyzeButton">开始分析</button>
+      </section>
+
+      <section class="card">
+        <h2>分析结果</h2>
+        <pre id="result">等待上传视频…</pre>
+      </section>
+    </main>
+
+    <script src="static/app.js"></script>
+  </body>
+</html>
